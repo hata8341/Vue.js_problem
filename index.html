@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vue演習問題</title>
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+</head>
+
+<body>
+  <div id="items" class="items">
+    <div class="tab-wrap">
+      <ul class="tabs">
+        <li class="tab-btn" v-on:click="change('A')" v-bind:class="{'active': isActive ==='A'}">タブ１</li>
+        <li class="tab-btn" v-on:click="change('B')" v-bind:class="{'active': isActive ==='B'}">タブ２</li>
+        <li class="tab-btn" v-on:click="change('C')" v-bind:class="{'active': isActive ==='C'}">タブ３</li>
+      </ul>
+      <ul class="content-wrap">
+        <li v-if="isActive === 'A'">コンテンツ1</li>
+        <li v-else-if="isActive === 'B'">コンテンツ2</li>
+        <li v-else-if="isActive === 'C'">コンテンツ3</li>
+      </ul>
+    </div>
+    <div class="modal">
+      <input v-on:click="open" type="button" value="開く" class="openBtn">
+      <open-modal v-show="showContainer" v-on:close="showContainer = false"></open-modal>
+    </div>
+    <div class="real_search">
+      <input type="text" v-model="text">
+      <ul v-for="list in filterNames" v-bind:key="list.id">
+        <li v-text="list.name"></li>
+      </ul>
+    </div>
+  </div>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
+
+

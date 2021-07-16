@@ -1,0 +1,81 @@
+.items {
+  max-width: 1200px;
+}
+
+.tab-wrap {
+  width: 600px;
+  margin: 100px auto;
+}
+
+.tabs {
+  display: flex;
+}
+
+.tab-btn {
+  padding: 0 20px;
+  cursor: pointer;
+  background: #fff;
+  border: solid 1px rgba(0, 0, 0, 0.2);
+  list-style: none;
+}
+
+.tab-btn:not(:first-child) {
+  border-left: none;
+}
+
+.tab-btn.active {
+  background: #000;
+  color: #fff;
+}
+
+.content-wrap {
+  list-style: none;
+}
+
+/* モーダルウィンドウ */
+
+.modal {
+  width: 100%;
+  height: auto;
+}
+
+.open {
+  display: block;
+}
+
+.window-container {
+  position: fixed;
+  left: 0%;
+  top: 0%;
+  height: 100vh;
+  width: 100vw;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.modal-window {
+  margin: 100px auto;
+  width: 60%;
+  background: #fff;
+  text-align: center;
+  padding: 60px;
+}
+
+.modal-window > h3 {
+  margin-bottom: 20px;
+}
+
+/* リアルタイム検索 */
+
+.real_search {
+  width: 600px;
+  margin: 100px auto 0;
+}
+
+.real_search > input {
+  font-size: large;
+}
+
+li {
+  list-style: none;
+  font-size: large;
+}
